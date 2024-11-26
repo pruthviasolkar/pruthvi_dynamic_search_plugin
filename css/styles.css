@@ -1,0 +1,127 @@
+/* Search container */
+#dsp-search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Search bar with icon beside input */
+.searchbar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #ccc; /* Light border around search bar */
+    padding: 0px;
+    background-color: #fff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Shadow effect for the search bar */
+}
+
+#dsp-search-input {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    margin: 0;
+    box-shadow: none; /* Remove shadow from input field */
+    margin-bottom: 0;
+}
+
+.icon {
+    padding:10px 15px;
+    margin: 0;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    background-color: #000;
+}
+
+.icon i{
+    font-size: 18px;
+    color: white; 
+     
+    object-fit: contain;
+}
+
+/* Results container */
+#dsp-results {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Display results with fade-in effect */
+#dsp-results[style*="display: block"] {
+    opacity: 1;
+}
+
+/* Individual result styling */
+.dsp-result {
+    padding: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.dsp-result h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.dsp-result p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #555;
+}
+
+.dsp-result a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Load more button */
+.load-more-button {
+    padding-inline: 20px !important;
+    padding-block: 8px !important;
+    border-radius: 10px !important;
+    color: white !important;
+    background-color: #000000 !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-top: 10px;
+}
+
+.load-more-button:hover {
+    background-color: #ffffff !important;
+    color: rgb(0, 0, 0) !important;
+    border: 2px solid rgb(0, 0, 0) !important;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .searchbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .icon {
+        margin-top: 10px;
+    }
+
+    #dsp-search-input {
+        width: 100%;
+        border-radius: 10px;
+        padding: 12px;
+    }
+}
